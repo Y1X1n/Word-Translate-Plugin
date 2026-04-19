@@ -1,0 +1,222 @@
+[
+  {
+    "Word": "hello",
+    "Translation": "你好；您好；喂",
+    "Phonetic": "/həˈloʊ/",
+    "PartOfSpeech": "int.",
+    "Definition": "used as a greeting or to begin a telephone conversation",
+    "Examples": [
+      "Hello, how are you?",
+      "Hello, is anybody there?"
+    ]
+  },
+  {
+    "Word": "world",
+    "Translation": "世界；地球；天下",
+    "Phonetic": "/wɜːrld/",
+    "PartOfSpeech": "n.",
+    "Definition": "the earth, together with all of its countries and peoples",
+    "Examples": [
+      "He wants to travel around the world.",
+      "The whole world is watching."
+    ]
+  },
+  {
+    "Word": "computer",
+    "Translation": "计算机；电脑",
+    "Phonetic": "/kəmˈpjuːtər/",
+    "PartOfSpeech": "n.",
+    "Definition": "an electronic device for storing and processing data",
+    "Examples": [
+      "I work on a computer all day.",
+      "The computer crashed again."
+    ]
+  },
+  {
+    "Word": "translation",
+    "Translation": "翻译；译本；转化",
+    "Phonetic": "/trænsˈleɪʃn/",
+    "PartOfSpeech": "n.",
+    "Definition": "the process of translating words or text from one language into another",
+    "Examples": [
+      "The book loses something in translation.",
+      "He specializes in translation from French into English."
+    ]
+  },
+  {
+    "Word": "document",
+    "Translation": "文件；文档；文献",
+    "Phonetic": "/ˈdɑːkjumənt/",
+    "PartOfSpeech": "n.",
+    "Definition": "a piece of written, printed, or electronic matter that provides information",
+    "Examples": [
+      "Please read the legal documents carefully.",
+      "Save the document before closing."
+    ]
+  },
+  {
+    "Word": "word",
+    "Translation": "单词；词；字",
+    "Phonetic": "/wɜːrd/",
+    "PartOfSpeech": "n.",
+    "Definition": "a single distinct meaningful element of speech or writing",
+    "Examples": [
+      "What does this word mean?",
+      "Can I have a word with you?"
+    ]
+  },
+  {
+    "Word": "language",
+    "Translation": "语言；语言文字",
+    "Phonetic": "/ˈlæŋɡwɪdʒ/",
+    "PartOfSpeech": "n.",
+    "Definition": "the method of human communication, either spoken or written",
+    "Examples": [
+      "English is a global language.",
+      "She speaks three languages fluently."
+    ]
+  },
+  {
+    "Word": "software",
+    "Translation": "软件",
+    "Phonetic": "/ˈsɔːftwer/",
+    "PartOfSpeech": "n.",
+    "Definition": "the programs and other operating information used by a computer",
+    "Examples": [
+      "You need to install the software first.",
+      "The company develops educational software."
+    ]
+  },
+  {
+    "Word": "application",
+    "Translation": "应用程序；应用；申请",
+    "Phonetic": "/ˌæplɪˈkeɪʃn/",
+    "PartOfSpeech": "n.",
+    "Definition": "a program or piece of software designed to fulfill a particular purpose",
+    "Examples": [
+      "Download the mobile application.",
+      "This application runs on Windows."
+    ]
+  },
+  {
+    "Word": "plugin",
+    "Translation": "插件；外挂程序",
+    "Phonetic": "/ˈplʌɡɪn/",
+    "PartOfSpeech": "n.",
+    "Definition": "a software component that adds a specific feature to an existing computer program",
+    "Examples": [
+      "Install the plugin to enable this feature.",
+      "This browser plugin blocks ads."
+    ]
+  },
+  {
+    "Word": "function",
+    "Translation": "功能；函数；作用",
+    "Phonetic": "/ˈfʌŋkʃn/",
+    "PartOfSpeech": "n.",
+    "Definition": "an activity or purpose natural to or intended for a person or thing",
+    "Examples": [
+      "The function of the heart is to pump blood.",
+      "This key has a special function."
+    ]
+  },
+  {
+    "Word": "feature",
+    "Translation": "功能；特点；特征",
+    "Phonetic": "/ˈfiːtʃər/",
+    "PartOfSpeech": "n.",
+    "Definition": "a distinctive attribute or aspect of something",
+    "Examples": [
+      "The camera has many advanced features.",
+      "This is a key feature of the product."
+    ]
+  },
+  {
+    "Word": "interface",
+    "Translation": "界面；接口；交界面",
+    "Phonetic": "/ˈɪntərfeɪs/",
+    "PartOfSpeech": "n.",
+    "Definition": "a point where two systems, subjects, organizations, etc. meet and interact",
+    "Examples": [
+      "The user interface is very intuitive.",
+      "This device has a USB interface."
+    ]
+  },
+  {
+    "Word": "database",
+    "Translation": "数据库",
+    "Phonetic": "/ˈdeɪtəbæs/",
+    "PartOfSpeech": "n.",
+    "Definition": "a structured set of data held in a computer",
+    "Examples": [
+      "Store the information in a database.",
+      "The database contains millions of records."
+    ]
+  },
+  {
+    "Word": "network",
+    "Translation": "网络；网状系统",
+    "Phonetic": "/ˈnetwɜːrk/",
+    "PartOfSpeech": "n.",
+    "Definition": "a group or system of interconnected people or things",
+    "Examples": [
+      "The computer is connected to a network.",
+      "Social network sites are very popular."
+    ]
+  },
+  {
+    "Word": "server",
+    "Translation": "服务器；侍者",
+    "Phonetic": "/ˈsɜːrvər/",
+    "PartOfSpeech": "n.",
+    "Definition": "a computer or computer program which manages access to a centralized resource or service in a network",
+    "Examples": [
+      "The server is down for maintenance.",
+      "We need to upgrade our server."
+    ]
+  },
+  {
+    "Word": "client",
+    "Translation": "客户；客户端；委托人",
+    "Phonetic": "/ˈklaɪənt/",
+    "PartOfSpeech": "n.",
+    "Definition": "a computer or program that requests data or services from another computer or program",
+    "Examples": [
+      "The client connects to the server.",
+      "We need to install the client software."
+    ]
+  },
+  {
+    "Word": "browser",
+    "Translation": "浏览器；浏览程序",
+    "Phonetic": "/ˈbraʊzər/",
+    "PartOfSpeech": "n.",
+    "Definition": "a computer program with a graphical user interface for displaying HTML files",
+    "Examples": [
+      "Open the website in your browser.",
+      "Which browser do you prefer?"
+    ]
+  },
+  {
+    "Word": "download",
+    "Translation": "下载；下载的文件",
+    "Phonetic": "/ˌdaʊnˈloʊd/",
+    "PartOfSpeech": "v./n.",
+    "Definition": "copy (data) from one computer system to another, typically over the Internet",
+    "Examples": [
+      "Download the file to your computer.",
+      "The download is complete."
+    ]
+  },
+  {
+    "Word": "upload",
+    "Translation": "上传；上载",
+    "Phonetic": "/ˌʌpˈloʊd/",
+    "PartOfSpeech": "v./n.",
+    "Definition": "transfer (data) from one computer to another, typically to one that is larger or remote",
+    "Examples": [
+      "Upload your photos to the cloud.",
+      "The upload failed."
+    ]
+  }
+]

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+  
+  <Product Id="*" 
+           Name="Word Translation Add-in" 
+           Language="2052" 
+           Version="1.0.0.0" 
+           Manufacturer="Translation Plugin" 
+           UpgradeCode="C3D4E5F6-A7B8-9012-CDEF-345678901234">
+    
+    <Package InstallerVersion="200" 
+             Compressed="yes" 
+             InstallScope="perUser" 
+             Platform="x86"
+             Description="Microsoft Word 翻译插件"
+             Manufacturer="Translation Plugin" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- 检查 .NET Framework 4.8 -->
+    <PropertyRef Id="WIX_IS_NETFRAMEWORK_48_OR_LATER_INSTALLED"/>
+    <Condition Message="此应用程序需要 .NET Framework 4.8 或更高版本。请安装后重试。">
+      <![CDATA[Installed OR WIX_IS_NETFRAMEWORK_48_OR_LATER_INSTALLED]]>
+    </Condition>
+
+    <!-- 检查 Microsoft Office -->
+    <Property Id="OFFICEINSTALLED">
+      <RegistrySearch Id="CheckOfficeWord" 
+                      Root="HKLM" 
+                      Key="SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\Winword.exe" 
+                      Type="file" />
+    </Property>
+    
+    <Condition Message="此插件需要安装 Microsoft Office Word。">
+      <![CDATA[Installed OR OFFICEINSTALLED]]>
+    </Condition>
+
+    <Feature Id="ProductFeature" Title="WordTranslationAddin" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="RegistryEntries" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="LocalAppDataFolder">
+        <Directory Id="ManufacturerFolder" Name="TranslationPlugin">
+          <Directory Id="INSTALLFOLDER" Name="WordTranslationAddin" />
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <!-- 主程序文件 -->
+      <Component Id="WordTranslationAddin.dll" Guid="D4E5F6A7-B8C9-0123-DEFA-456789012345">
+        <File Id="WordTranslationAddin.dll" 
+              Name="WordTranslationAddin.dll" 
+              Source="$(var.WordTranslationAddin.TargetDir)WordTranslationAddin.dll" 
+              KeyPath="yes" />
+      </Component>
+      
+      <Component Id="Newtonsoft.Json.dll" Guid="E5F6A7B8-C9D0-1234-EFAB-567890123456">
+        <File Id="Newtonsoft.Json.dll" 
+              Name="Newtonsoft.Json.dll" 
+              Source="$(var.WordTranslationAddin.TargetDir)Newtonsoft.Json.dll" 
+              KeyPath="yes" />
+      </Component>
+      
+      <!-- 配置文件 -->
+      <Component Id="WordTranslationAddin.dll.config" Guid="F6A7B8C9-D0E1-2345-FABC-678901234567">
+        <File Id="WordTranslationAddin.dll.config" 
+              Name="WordTranslationAddin.dll.config" 
+              Source="$(var.WordTranslationAddin.TargetDir)WordTranslationAddin.dll.config" 
+              KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+
+    <!-- 注册表项 -->
+    <DirectoryRef Id="TARGETDIR">
+      <Component Id="RegistryEntries" Guid="A7B8C9D0-E1F2-3456-ABCD-789012345678">
+        <RegistryKey Root="HKCU" 
+                     Key="Software\Microsoft\Office\Word\Addins\WordTranslationAddin">
+          <RegistryValue Type="string" Name="Description" Value="Word Translation Add-in" />
+          <RegistryValue Type="string" Name="FriendlyName" Value="Word Translation Add-in" />
+          <RegistryValue Type="string" Name="Manifest" 
+                         Value="[INSTALLFOLDER]WordTranslationAddin.dll|vsto|vstolocal" />
+          <RegistryValue Type="integer" Name="LoadBehavior" Value="3" />
+        </RegistryKey>
+        
+        <!-- VSTO Runtime 注册 -->
+        <RegistryKey Root="HKCU" 
+                     Key="Software\Microsoft\VSTO\Security\Inclusion\4f7b5c3d-8e9a-4b2c-9d1e-5f6a7b8c9d0e">
+          <RegistryValue Type="string" Name="Url" Value="[INSTALLFOLDER]WordTranslationAddin.dll" />
+          <RegistryValue Type="integer" Name="Enabled" Value="1" />
+        </RegistryKey>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>
